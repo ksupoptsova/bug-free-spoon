@@ -1,3 +1,4 @@
+import os
 from sqlalchemy import Integer, String, Float
 from sqlalchemy.orm import Mapped, mapped_column
 from config.db_config import Base
