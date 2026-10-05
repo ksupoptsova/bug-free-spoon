@@ -1,0 +1,24 @@
+FOOD = ["Еда"]
+CLOTHES = ["Одежда"]
+PRODUCT = ["Продукты"]
+CATEGORIES = FOOD + CLOTHES + PRODUCT
+
+NAME_CLOTHES = ["Футболка","Платье"]
+NAME_FOOD = ["Хлеб", "Сыр", "Черноголовка"]
+NAME_PRODUCT = ["Кола", "Молоко", "Десяток яиц"]
+NAME_GOODS = NAME_FOOD + NAME_CLOTHES + NAME_PRODUCT
+
+FOOD_KEYBOARD = "Еда"
+CLOTHES_KEYBOARD = "Одежда"
+PRODUCT_KEYBOARD = "Продукты"
+
+NAME_CLOTHES_KEYBOARD = ""
+NAME_FOOD_KEYBOARD = ""
+NAME_PRODUCT_KEYBOARD = ""
+
+ITEMS = {
+    FOOD_KEYBOARD: NAME_FOOD,
+    CLOTHES_KEYBOARD: NAME_CLOTHES,
+    PRODUCT_KEYBOARD: NAME_PRODUCT
+    }
+
