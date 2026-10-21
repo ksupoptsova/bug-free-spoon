@@ -20,3 +20,9 @@ def create(data):
         product = Product(name=name, price=price, quantity=quantity)
         session.add(product)
         session.commit()
+
+def get_info_product_from_database():
+    with Session() as session:
+        query = select(Product.name)
+        product = session.execute(query).scalars().all()
+        return product
