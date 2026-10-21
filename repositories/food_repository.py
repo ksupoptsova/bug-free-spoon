@@ -21,3 +21,9 @@ def create(data):
         food = Food(name=name, price=price, quantity=quantity, srok_godnosty = srok_godnosty)
         session.add(food)
         session.commit()
+
+def get_info_food_from_database():
+    with Session() as session:
+        query = select(Food.name)
+        food = session.execute(query).scalars().all()
+        return food

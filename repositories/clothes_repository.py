@@ -21,3 +21,12 @@ def create(data):
         clothes = Clothes(name=name, price=price, quantity=quantity, size=size)
         session.add(clothes)
         session.commit()
+
+def get_info_clothes_from_database():
+    with Session() as session:
+        query = select(Clothes.name)
+        clothes = session.execute(query).scalars().all()
+        return clothes
+
+
+
