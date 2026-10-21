@@ -22,3 +22,6 @@ ITEMS = {
     PRODUCT_KEYBOARD: NAME_PRODUCT
     }
 
+YES = "Да"
+NO = "Нет"
+AGAIN = "Добавить заново"
