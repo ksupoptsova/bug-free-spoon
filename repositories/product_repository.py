@@ -11,3 +11,12 @@ def print_product() -> str:
         for product in res:
             text += str(product.id)+ ")" + "Название товара: " + product.name + ", "+ "Цена: " + str(product.price) + ", " + "Количество: " + str(product.quantity) + "\n"
     return text
+
+def create(data):
+    name = data.get("name_of_product")
+    price = data.get("price")
+    quantity = data.get("quantity")
+    with Session() as session:
+        product = Product(name=name, price=price, quantity=quantity)
+        session.add(product)
+        session.commit()
