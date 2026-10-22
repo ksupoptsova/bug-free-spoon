@@ -1,7 +1,7 @@
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 from aiogram.types import ReplyKeyboardMarkup
 
-from consts import NAME_PRODUCT, NAME_CLOTHES, NAME_FOOD, ITEMS
+from consts import ITEMS
 
 def products_keyboard(product_type: str) -> ReplyKeyboardMarkup:
     keyboard = ReplyKeyboardBuilder()
