@@ -3,7 +3,7 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram import Router
 from aiogram.types import Message
-from consts import CATEGORIES, NAME_GOODS
+from consts import CATEGORIES
 from keyboards.category_of_product import types_of_product_keyboard
 from keyboards.products import products_keyboard
 
@@ -33,13 +33,6 @@ async def name_of_product(message: Message, state: FSMContext):
 
 @router.message(AddToCartStates.name_of_product)
 async def quantity(message: Message, state: FSMContext):
-    while True:
-        name = NAME_GOODS
-        if message.text in name:
-            break
-        else:
-            await message.answer("Напишите корректное название товара")
-            return
     await state.update_data(name_of_product=message.text)
     await state.set_state(AddToCartStates.quantity)
     await message.answer("Укажите количество товара")
