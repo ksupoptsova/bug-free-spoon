@@ -18,6 +18,10 @@ class AdminStates(StatesGroup):
     food_confirm = State()
     clothes_confirm = State()
     start = State()
+    delete_product = State()
+    add_product = State()
+    ask_action = State()
+
 
 
 
