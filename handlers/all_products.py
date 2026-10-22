@@ -14,6 +14,6 @@ router = Router()
 @router.message(Command('all_products'))
 async def all_products(message: Message):
     chat_id = message.chat.id
-    await bot.send_message(chat_id, text = print_clothes())
+    await bot.send_message(chat_id, text=print_clothes())
     await bot.send_message(chat_id, text=print_food())
     await bot.send_message(chat_id, text=print_product())
